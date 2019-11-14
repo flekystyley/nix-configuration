@@ -8,58 +8,58 @@
  environment.systemPackages = with pkgs; [
 
 	# basic
-        wget 
-        curl
-        git
-        zsh 
-        gcc 
-        gnumake 
-        binutils 
-        pkg-config 
-        zip 
-        unzip 
-        xclip 
-        htop
-        openal 
-        byobu 
-        xorg.xev 
-        xorg.xprop
-        evince 
-        tig
-        peco
-        neofetch
-        direnv
-        dmenu
-        compton
-        qemu
-	    tmux
+    wget 
+    curl
+    git
+    zsh 
+    gcc 
+    gnumake 
+    binutils 
+    pkg-config 
+    zip 
+    unzip 
+    xclip 
+    htop
+    openal 
+    byobu 
+    xorg.xev 
+    xorg.xprop
+    evince 
+    tig
+    peco
+    neofetch
+    direnv
+    dmenu
+    compton
+    qemu
+	tmux
 
 	# terminal
-        terminator
+    terminator
 
 	# browser
 	chromium
 
 	# editor
-        emacs
-        vim
+    emacs
+    vim
 	vscode
 
 	# programming launguage 
-        go
-        gcc
-        libcap
+    go
+    gcc
+    libcap
 
 	# file manager
-        ranger
+    ranger
 
 	# desktop manager
 	feh
 
-        # editor
-        emacs
-        vim 
-        vscode 
+    # editor
+    emacs
+    vim 
+    vscode 
   ];
 
   environment.variables = {

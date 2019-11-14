@@ -40,6 +40,11 @@
 
   services.openssh.enable = true;
 
+  programs = {                                                                                                                                                                                   
+    tmux.enable = true;
+    zsh.enable = true;
+  };
+
   users.users.flekystyley = {
     isNormalUser = true;
     uid 	 = 1000;

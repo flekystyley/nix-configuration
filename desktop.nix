@@ -5,7 +5,10 @@
     enable          = true;
     layout     	    = "us";
     xkbOptions      = "ctrl:nocaps";
-    libinput.enable = true;
+    libinput = {
+      enable = true;
+      tapping = false;
+    };
 
     windowManager.i3 = {
       enable  = true;
