@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
  nixpkgs = {
    config.allowUnfree = true;
  };
@@ -33,6 +32,7 @@
         dmenu
         compton
         qemu
+	    tmux
 
 	# terminal
         terminator
@@ -65,5 +65,6 @@
   environment.variables = {
     EDITOR  = "emacs";
     BROWSER = "chromium";
+    GOROOT = [ "${pkgs.go.out}/share/go" ]; 
   };
 }

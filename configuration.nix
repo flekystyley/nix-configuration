@@ -6,11 +6,16 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./desktop.nix
+      ./docker.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [
+   "button.lid_init_state=open"
+   "pci=nomsi"
+  ];
+
   hardware.pulseaudio.enable = true;
   hardware.cpu.intel.updateMicrocode = true;
   sound.enable = true;
@@ -19,11 +24,8 @@
     hostName = "flekystyley";
     nameservers = [ "8.8.8.8" ];  
     wireless.enable = true;
-    networkmanager.enable = false;
-    networkmanager.extraConfig = ''
-     [main]
-     rc-manager=resolvconf
-    '';
+    useDHCP = false;
+    interfaces.wlp1s0.useDHCP = true;
   };
 
   i18n = {
@@ -36,12 +38,6 @@
 
   time.timeZone = "Asia/Tokyo";
 
-  programs = {
-    tmux.enable    = true;
-    zsh.enable     = true;
-    ssh.startAgent = true;
-  };
-  
   services.openssh.enable = true;
 
   users.users.flekystyley = {
@@ -50,8 +46,9 @@
     shell 	 = pkgs.zsh;
     home 	 = "/home/flekystyley";
     createHome 	 = true;
-    extraGroups  = [ "wheel" "networkmanager" "tty" "dialout" "zsh" "plugdev" ];
+    extraGroups  = [ "wheel" "networkmanager" "tty" "dialout" "plugdev" ];
   }; 
-  
-  system.stateVersion = "19.03";
+
+  system.stateVersion = "19.09";
 }
+

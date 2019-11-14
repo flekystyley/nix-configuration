@@ -34,7 +34,6 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       hack-font
-      nerdfonts
     ];
   };
 }
