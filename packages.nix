@@ -24,6 +24,7 @@
         byobu 
         xorg.xev 
         xorg.xprop
+        xorg.xbacklight
         evince 
         tig
         peco

@@ -17,7 +17,9 @@
   ];
 
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;
   hardware.cpu.intel.updateMicrocode = true;
+  hardware.brightnessctl.enable = true;
   sound.enable = true;
 
   networking = {
@@ -43,6 +45,7 @@
   programs = {                                                                                                                                                                                   
     tmux.enable = true;
     zsh.enable = true;
+    light.enable = true;
   };
 
   users.users.flekystyley = {
@@ -51,7 +54,7 @@
     shell 	 = pkgs.zsh;
     home 	 = "/home/flekystyley";
     createHome 	 = true;
-    extraGroups  = [ "wheel" "networkmanager" "tty" "dialout" "plugdev" ];
+    extraGroups  = [ "wheel" "networkmanager" "tty" "dialout" "plugdev" "video" ];
   }; 
 
   system.stateVersion = "19.09";
