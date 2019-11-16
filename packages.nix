@@ -33,7 +33,9 @@
         dmenu
         compton
         qemu
+	nasm
 	tmux
+	nasm
 	ghq
 
 	# terminal

@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./desktop.nix
-      ./docker.nix
+      ./virtualisation.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -56,6 +56,8 @@
     createHome 	 = true;
     extraGroups  = [ "wheel" "networkmanager" "tty" "dialout" "plugdev" "video" ];
   }; 
+
+  users.extraGroups.vboxusers.members = [ "flekystyley" ];
 
   system.stateVersion = "19.09";
 }
