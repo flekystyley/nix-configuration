@@ -50,8 +50,6 @@
 	# editor
         emacs
         vim
-	vscode
-	sublime
 
 	# programming launguage 
         go
@@ -61,13 +59,8 @@
 	# file manager
         ranger
 
-	# desktop manager
+	# image manager
 	feh
-
-        # editor
-        emacs
-        vim 
-        vscode 
   ];
 
   environment.variables = {
