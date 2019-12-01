@@ -40,6 +40,8 @@
 	ghq
 	pciutils
 	imagemagick
+	bochs
+	slop
 
 	# terminal
         terminator
