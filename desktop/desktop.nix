@@ -33,6 +33,8 @@
     shadow          = true;
     fadeDelta       = 4; 
   };
+
+  services.sshd.enable = true;
   
   fonts = {
     enableDefaultFonts     = true;
@@ -41,6 +43,7 @@
     fonts = with pkgs; [
       hack-font
       nerdfonts
+      ubuntu_font_family
     ];
   };
 }

@@ -42,6 +42,7 @@
 	imagemagick
 	bochs
 	slop
+	android-studio
 
 	# terminal
         terminator
