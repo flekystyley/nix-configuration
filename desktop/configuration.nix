@@ -35,7 +35,7 @@
     inputMethod.enabled      = "ibus";
     inputMethod.ibus.engines = with pkgs.ibus-engines; [ mozc anthy ];
     consoleFont              = "Lat2-Terminus16";
-    consoleKeyMap 	     = "us";
+    consoleKeyMap 	         = "us";
     defaultLocale            = "ja_JP.UTF-8";
   };
 
